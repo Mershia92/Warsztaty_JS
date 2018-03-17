@@ -20,6 +20,8 @@ Naszym celem jest sprawienie, by po najechaniu kursorem myszy na część menu g
 3. Sprawdź, czy plik działa np. przez wpisanie w nim `console.log('działa');`. Ta wiadomość powinna wyświetlić się w konsoli po wejściu na stronę.
 4. Strona ładuje się "od góry do dołu". Dlatego musimy zadbać o to, by załadowała się cała zawartość kodu HTML, zanim zaczniemy wykonywać na nim jakieś działania. Żeby to zrobić będziemy nasłuchiwać na `event` `DOMContentLoaded`. Ten `event` oznacza, że załadowała się cała struktura strony. Dzięki dodaniu `event listenera` do dokumentu, dopiero po załadowaniu całej struktury DOM, zacznie wykonywać się skrypt z pliku `app.js`. Umieść więc w swoim pliku następujący kod:
 ```javascript
+
+// trzeba uzyć, żeby JS się prędzej nie wgrał niż HTML
     document.addEventListener('DOMContentLoaded', function() {
       // tutaj będziemy umieszczać kod ze wszystkich zadań
     });
@@ -30,7 +32,7 @@ Naszym celem jest sprawienie, by po najechaniu kursorem myszy na część menu g
 ```
 Strict mode robi też kilka innych rzeczy, więcej możesz poczytać <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">tutaj</a>.
 
-Gotowe! Możemy przejść dalej. 
+Gotowe! Możemy przejść dalej.
 
 ## Dropdown menu
 
@@ -38,7 +40,7 @@ Gotowe! Możemy przejść dalej.
 
 Pamiętaj: nazywaj zmienne tak, aby wiedzieć, jakie elementy się za nimi kryją.
 
-2. Teraz zaczynamy z logiką. Chcemy, by po najechaniu myszą na element listy pojawiało się dodatkowe menu. Do tego elementu więc dodamy `event listener`. Będzie to oznaczało tyle, że nasz skrypt będzie teraz nasłuchiwał, czy dany `event` nastąpił. Jeśli tak, zrobi to, co wskażemy mu w kodzie. Dołącz do elementu listy `event listener`, który będzie nasłuchiwał na `mouseover`, czyli najechanie myszką na dany element. 
+2. Teraz zaczynamy z logiką. Chcemy, by po najechaniu myszą na element listy pojawiało się dodatkowe menu. Do tego elementu więc dodamy `event listener`. Będzie to oznaczało tyle, że nasz skrypt będzie teraz nasłuchiwał, czy dany `event` nastąpił. Jeśli tak, zrobi to, co wskażemy mu w kodzie. Dołącz do elementu listy `event listener`, który będzie nasłuchiwał na `mouseover`, czyli najechanie myszką na dany element.
 Zwróć uwagę, że właśnie `event listener` dodaliśmy do całego naszego dokumentu na samym początku kodu. Teraz musimy zadziałać analogicznie.
 
 3. Po dołączeniu `listenera` w funkcji, która jest do niego dołączona (to tzw. `callback`), dodaj `console.log` z jakimś tekstem. Teraz po najechaniu myszką na dany element listy powinien wyświetlić się tekst z `console.log` w konsoli.

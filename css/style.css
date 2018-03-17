@@ -305,4 +305,6 @@ footer p {
   margin-top: 3rem;
 }
 
-.more {}
+.more {
+  display: none;
+}
